@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Shades</title>
+    <meta name="keywords" content="Color variations, Color palette, Color palette generator">
+	<meta name="description" content="Color palette generator">
+	<meta name="author" content="Cristian Canciani">
+    <link rel="icon" type="image/svg+xml" href="img\logo.svg" sizes="any">
+    <link rel="stylesheet" type="text/css" href="css\main.css">
+    <script src="https://kit.fontawesome.com/d8e551b499.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <div class="nav">
+        <div class="logo">
+            <img src="img\logo.svg" alt="Logo">
+            <h1>Color Shades</h1>
+        </div>
+
+        <div>
+            <label for="coloradd">Add color:</label>
+            <input id="coloradd" type="color" value="#94388c">
+            <button class="button" onclick="addColor();">Add</button>
+        </div>
+
+        <div>
+            <button class="button" onclick="clearColors();"">Clear List</button>
+            <button class="button" onclick="localStorage.clear();location.reload();">Reset page</button>
+        </div>
+        
+        <div>
+            <button class="button" onclick="downloadJSON()">Download Colors</button>
+            <button class="button" onclick="document.getElementById('selectFile').click();">Upload Colors</button>
+            <input type="file" id="selectFile" style="display:none;" multiple/>
+        </div>
+        <i class="fas fa-info" id="info--open"></i>
+    </div>
+    <main>
+    
+    <div class="info">
+        <span class="info--close">&times;</span>
+
+        <h1>Welcome to Color Shades!</h1>
+        
+        <h2>Features:</h2>
+        
+        <ul>
+            <li>When you add a color generete three darker and three lighter variations of that main color.</li>
+            <li>You can't add the same color twice.</li>
+            <li>If you like a color, you can copy the hex value to your clipboard by clicking the hex value below the color.</li>
+            <li>This page reminds your color list after closing the page.</li>
+            <li>You can download or upload your color list. Perfect for share it with your friends. 😁</li>
+            <li>You can upload a JSON file or a plain text file with the color hex value in each line. Also support multiple files upload.</li>
+        </ul>
+        
+        <p>Tip: You can have a small window with Color Shades while you work on your project or browse in the internet and use the color picker to choose and store the colors you like.</p>
+
+    </div>
+    <div id="container"></div>
+    <script src="js\script.js"></script>
+</main>
+
+<div class="footer">
+    <a href="https://www.buymeacoffee.com/kriztiam" target="_blank"><img src="img\bmc.svg" alt="Buy me a coffee."></a>
+    <a href="https://github.com/Kriztiam" target="_blank"><i class="fab fa-github"></i></a>
+</div>
+</body>
+</html>
