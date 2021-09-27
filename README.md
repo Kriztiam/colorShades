@@ -5,4 +5,4 @@ Starting from a main color, new shades are generated based on the main hue.
 - You can also upload a plain text file where each line contains the hex value of a color.
 - Once you are happy with your color palette, you can download it as a JSON file.
 
-[Go to site](https://kriztiam.github.io/colorShades/)
+### [Go to site](https://kriztiam.github.io/colorShades/)
